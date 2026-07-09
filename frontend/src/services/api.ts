@@ -5,6 +5,9 @@ const api = axios.create({
   headers: { 'Content-Type': 'application/json' },
 });
 
+// Note: VITE_API_URL must be set in Cloudflare Pages environment variables.
+// This comment is intentionally harmless and only exists to trigger a deploy.
+
 // Request interceptor — attach token
 api.interceptors.request.use(
   (config) => {
